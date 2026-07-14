@@ -1,6 +1,6 @@
 asyncio-udp-server-playground
 =============================
-<kbd>[**vscode-web-action**](https://github.com/dirkarnez/webserial-wrapper/actions/workflows/vscode-web.yml)</kbd><br>
+<kbd>[**vscode-web-action**](https://github.com/dirkarnez/vscode-web-action/actions/workflows/vscode-web.yml)</kbd><br>
 
 
 
