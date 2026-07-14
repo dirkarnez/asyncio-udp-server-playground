@@ -2,6 +2,11 @@
 from typing import Any, List
 import numpy as np
 import asyncio
+import contextlib
+import logging
+from asyncio.exceptions import CancelledError
+
+from rpcudp.protocol import RPCProtocol
 
 class EchoServerProtocol:
     def connection_made(self, transport):
@@ -27,7 +32,8 @@ async def main():
     
     # Run forever
     try:
-        await asyncio.sleep(3600)
+        with contextlib.suppress(CancelledError):
+            await asyncio.Event().wait()
     finally:
         transport.close()
 
