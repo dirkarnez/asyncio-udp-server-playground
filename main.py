@@ -3,12 +3,9 @@ from typing import Any, List
 import numpy as np
 import asyncio
 import contextlib
-import logging
 from asyncio.exceptions import CancelledError
 
-from rpcudp.protocol import RPCProtocol
-
-class EchoServerProtocol:
+class EchoServerProtocol(asyncio.DatagramProtocol):
     def connection_made(self, transport):
         self.transport = transport
 
